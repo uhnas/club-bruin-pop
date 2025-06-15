@@ -10,6 +10,7 @@ import References from "./components/References";
 
 // Create global audio context
 export const AudioContext = createContext<{
+  audioRef: React.RefObject<HTMLAudioElement | null>;
   isPlaying: boolean;
   currentSong: number;
   playlist: Array<{ title: string; artist: string; file: string }>;
@@ -21,6 +22,7 @@ export const AudioContext = createContext<{
   handlePrevious: () => void;
   handleTimeUpdate: () => void;
   handleSeek: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handlePlaySong: (songIndex: number) => void;
 } | null>(null);
 
 // Component to handle scroll to top on route change
@@ -290,6 +292,7 @@ function HomePage() {
   const audioContext = useContext(AudioContext);
   if (!audioContext) return null;
   const { 
+    audioRef, 
     isPlaying, 
     currentSong, 
     playlist, 
@@ -300,6 +303,7 @@ function HomePage() {
     handleNext, 
     handlePrevious,
     handleSeek,
+    handlePlaySong
   } = audioContext;
 
   const navigate = useNavigate();
@@ -718,7 +722,24 @@ export default function App() {
     }
   };
 
+  const handlePlaySong = (songIndex: number) => {
+    setCurrentSong(songIndex);
+    if (audioRef.current) {
+      audioRef.current.src = playlist[songIndex].file;
+      // Load the new source first
+      audioRef.current.load();
+      // Then attempt to play
+      audioRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch(error => {
+        console.error("Error playing song:", error);
+        setIsPlaying(false);
+      });
+    }
+  };
+
   const audioContextValue = {
+    audioRef,
     isPlaying,
     currentSong,
     playlist,
@@ -730,6 +751,7 @@ export default function App() {
     handlePrevious,
     handleTimeUpdate,
     handleSeek,
+    handlePlaySong
   };
 
   return (
