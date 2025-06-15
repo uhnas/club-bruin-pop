@@ -1,0 +1,333 @@
+year,genre,count
+2005,Country,5
+2005,Dance,5
+2005,Pop,40
+2005,R&B,25
+2005,Rap/Hip Hop,15
+2005,Rock,10
+2006,Country,5
+2006,Dance,5
+2006,Pop,45
+2006,R&B,20
+2006,Rap/Hip Hop,15
+2006,Rock,10
+2007,Country,6
+2007,Dance,5
+2007,Pop,38
+2007,R&B,22
+2007,Rap/Hip Hop,20
+2007,Rock,9
+2008,Country,6
+2008,Dance,6
+2008,Pop,36
+2008,R&B,20
+2008,Rap/Hip Hop,22
+2008,Rock,10
+2009,Alternative,23
+2009,Asian Music,2
+2009,Christian,3
+2009,Country,35
+2009,Dance,6
+2009,Electro,6
+2009,Films/Games,9
+2009,Folk,1
+2009,Jazz,1
+2009,Kids,1
+2009,Metal,1
+2009,Pop,73
+2009,R&B,21
+2009,Rap/Hip Hop,50
+2009,Reggae,1
+2009,Rock,27
+2009,Salsa,1
+2009,Unknown Genre,2
+2010,Alternative,34
+2010,Asian Music,3
+2010,Country,69
+2010,Dance,9
+2010,Electro,7
+2010,Films/Games,15
+2010,Folk,3
+2010,Jazz,2
+2010,Kids,1
+2010,Latin Music,1
+2010,Metal,1
+2010,Pop,142
+2010,R&B,36
+2010,Rap/Hip Hop,94
+2010,Reggae,3
+2010,Rock,43
+2010,Traditional Mexicano,1
+2010,Unknown Genre,7
+2011,Alternative,34
+2011,Asian Music,3
+2011,Christian,5
+2011,Country,66
+2011,Dance,11
+2011,Electro,12
+2011,Films/Games,14
+2011,Kids,1
+2011,Latin Music,1
+2011,Metal,1
+2011,Pop,149
+2011,R&B,25
+2011,Rap/Hip Hop,92
+2011,Reggae,3
+2011,Reggaeton,1
+2011,Rock,51
+2011,Singer & Songwriter,2
+2011,Unknown Genre,13
+2012,Alternative,36
+2012,Asian Music,3
+2012,Brazilian Music,1
+2012,Christian,5
+2012,Country,54
+2012,Dance,10
+2012,Electro,12
+2012,Films/Games,8
+2012,Jazz,1
+2012,Latin Music,1
+2012,Pop,107
+2012,R&B,21
+2012,Rap/Hip Hop,86
+2012,Reggae,2
+2012,Rock,14
+2012,Traditional Mexicano,1
+2012,Unknown Genre,1
+2013,Alternative,36
+2013,Asian Music,1
+2013,Christian,1
+2013,Country,62
+2013,Dance,12
+2013,Electro,11
+2013,Films/Games,10
+2013,Folk,2
+2013,Kids,2
+2013,Latin Music,4
+2013,Pop,103
+2013,R&B,20
+2013,Rap/Hip Hop,90
+2013,Rock,17
+2013,Singer & Songwriter,2
+2013,Traditional Mexicano,1
+2013,Unknown Genre,4
+2014,Alternative,37
+2014,Asian Music,1
+2014,Christian,2
+2014,Country,68
+2014,Cumbia,1
+2014,Dance,14
+2014,Electro,10
+2014,Films/Games,12
+2014,Folk,1
+2014,Jazz,1
+2014,Latin Music,2
+2014,Metal,3
+2014,Pop,98
+2014,R&B,16
+2014,Rap/Hip Hop,67
+2014,Reggaeton,1
+2014,Rock,15
+2014,Salsa,1
+2014,Singer & Songwriter,1
+2014,Soul & Funk,1
+2014,Traditional Mexicano,4
+2014,Unknown Genre,4
+2015,Alternative,35
+2015,Christian,2
+2015,Country,59
+2015,Dance,10
+2015,Electro,14
+2015,Films/Games,9
+2015,Jazz,3
+2015,Kids,1
+2015,Latin Music,1
+2015,Pop,102
+2015,R&B,20
+2015,Rap/Hip Hop,108
+2015,Rock,26
+2015,Unknown Genre,2
+2016,Alternative,33
+2016,Asian Music,2
+2016,Christian,1
+2016,Classical,2
+2016,Country,53
+2016,Dance,11
+2016,Electro,16
+2016,Films/Games,9
+2016,Jazz,1
+2016,Kids,1
+2016,Latin Music,1
+2016,Pop,105
+2016,R&B,20
+2016,Ranchera,1
+2016,Rap/Hip Hop,114
+2016,Reggae,1
+2016,Reggaeton,2
+2016,Rock,32
+2016,Singer & Songwriter,3
+2016,Unknown Genre,2
+2017,Alternative,28
+2017,Asian Music,2
+2017,Christian,1
+2017,Classical,4
+2017,Country,53
+2017,Dance,7
+2017,Electro,13
+2017,Films/Games,7
+2017,Latin Music,4
+2017,Pop,94
+2017,R&B,31
+2017,Rap/Hip Hop,186
+2017,Reggaeton,2
+2017,Rock,18
+2017,Traditional Mexicano,1
+2017,Unknown Genre,2
+2018,Alternative,49
+2018,Asian Music,6
+2018,Banda/Grupero,1
+2018,Christian,1
+2018,Classical,2
+2018,Country,37
+2018,Dance,20
+2018,Electro,12
+2018,Films/Games,14
+2018,Folk,1
+2018,Latin Music,1
+2018,Pop,74
+2018,R&B,32
+2018,Rap/Hip Hop,297
+2018,Reggaeton,7
+2018,Rock,28
+2018,Singer & Songwriter,4
+2018,Traditional Mexicano,3
+2018,Unknown Genre,6
+2019,African Music,1
+2019,Alternative,35
+2019,Asian Music,6
+2019,Classical,1
+2019,Country,59
+2019,Dance,16
+2019,Electro,10
+2019,Films/Games,9
+2019,Folk,1
+2019,Kids,2
+2019,Latin Music,3
+2019,Pop,104
+2019,R&B,35
+2019,Rap/Hip Hop,206
+2019,Reggaeton,5
+2019,Rock,18
+2019,Traditional Mexicano,2
+2019,Unknown Genre,5
+2020,Alternative,67
+2020,Asian Music,13
+2020,Brazilian Music,1
+2020,Country,71
+2020,Dance,10
+2020,Electro,6
+2020,Films/Games,8
+2020,Jazz,1
+2020,Latin Music,13
+2020,Metal,1
+2020,Pop,81
+2020,R&B,46
+2020,Rap/Hip Hop,313
+2020,Reggaeton,15
+2020,Rock,16
+2020,Salsa,1
+2020,Unknown Genre,10
+2021,African Music,1
+2021,Alternative,43
+2021,Asian Music,6
+2021,Brazilian Music,1
+2021,Christian,3
+2021,Classical,4
+2021,Country,72
+2021,Dance,10
+2021,Electro,5
+2021,Films/Games,2
+2021,Latin Music,3
+2021,Metal,2
+2021,Pop,128
+2021,R&B,43
+2021,Rap/Hip Hop,292
+2021,Reggae,1
+2021,Reggaeton,4
+2021,Rock,22
+2021,Singer & Songwriter,1
+2021,Traditional Mexicano,3
+2021,Unknown Genre,8
+2022,African Music,2
+2022,Alternative,32
+2022,Asian Music,7
+2022,Brazilian Music,1
+2022,Christian,1
+2022,Country,57
+2022,Dance,18
+2022,Electro,5
+2022,Films/Games,14
+2022,Folk,2
+2022,Latin Music,24
+2022,Metal,1
+2022,Pop,118
+2022,R&B,52
+2022,Rap/Hip Hop,261
+2022,Reggaeton,1
+2022,Rock,22
+2022,Singer & Songwriter,2
+2022,Traditional Mexicano,3
+2022,Unknown Genre,11
+2023,African Music,1
+2023,Alternative,32
+2023,Asian Music,12
+2023,Banda/Grupero,3
+2023,Christian,1
+2023,Classical,1
+2023,Country,117
+2023,Cumbia,1
+2023,Dance,5
+2023,Electro,3
+2023,Films/Games,5
+2023,Kids,1
+2023,Latin Music,30
+2023,Pop,102
+2023,R&B,17
+2023,Rap/Hip Hop,228
+2023,Reggaeton,5
+2023,Rock,25
+2023,Singer & Songwriter,1
+2023,Traditional Mexicano,19
+2023,Unknown Genre,11
+2024,Alternative,42
+2024,Asian Music,13
+2024,Christian,2
+2024,Classical,1
+2024,Country,110
+2024,Dance,12
+2024,Electro,7
+2024,Films/Games,8
+2024,Folk,1
+2024,Latin Music,8
+2024,Pop,126
+2024,R&B,21
+2024,Rap/Hip Hop,244
+2024,Reggae,1
+2024,Reggaeton,1
+2024,Rock,11
+2024,Singer & Songwriter,2
+2024,Traditional Mexicano,16
+2024,Unknown Genre,3
+2025,Alternative,1
+2025,Asian Music,1
+2025,Country,9
+2025,Dance,2
+2025,Electro,1
+2025,Folk,1
+2025,Latin Music,17
+2025,Pop,6
+2025,R&B,22
+2025,Rap/Hip Hop,23
+2025,Rock,4
+2025,Traditional Mexicano,3
+2025,Unknown Genre,4
