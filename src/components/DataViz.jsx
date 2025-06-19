@@ -41,11 +41,11 @@ const DataViz = () => {
           <h3>Pop Music Lyrics Word Cloud</h3>
           <div className="word-cloud-container">
             <img 
-              src="/wordcloud.svg" 
+              src="./wordcloud.svg" 
               alt="Music Keywords Word Cloud" 
               className="word-cloud-image"
               onError={(e) => {
-                console.log('SVG failed to load from /wordcloud.svg');
+                console.log('SVG failed to load from ./wordcloud.svg');
                 e.currentTarget.style.display = 'none';
                 const container = e.currentTarget.parentElement;
                 if (container) {

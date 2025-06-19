@@ -12,7 +12,7 @@ const MusicSalesChart = () => {
       try {
         setLoading(true);
         
-        const response = await fetch('/musicdatasales.csv');
+        const response = await fetch('./musicdatasales.csv');
         if (response.ok) {
           const text = await response.text();
           Papa.parse(text, {

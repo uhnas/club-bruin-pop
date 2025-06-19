@@ -14,7 +14,7 @@ const EconomicMusicChart = () => {
         setLoading(true);
         
         // Load NYSE data (once converted to CSV)
-        const nyseResponse = await fetch('/indexData_2005_onward_cleaned.csv');
+        const nyseResponse = await fetch('./indexData_2005_onward_cleaned.csv');
         if (nyseResponse.ok) {
           const nyseText = await nyseResponse.text();
           Papa.parse(nyseText, {
@@ -30,7 +30,7 @@ const EconomicMusicChart = () => {
         }
 
         // Load genre popularity data
-        const genreResponse = await fetch('/song_counts_by_year_genre_2005_2008_added.csv');
+        const genreResponse = await fetch('./song_counts_by_year_genre_2005_2008_added.csv');
         if (genreResponse.ok) {
           const genreText = await genreResponse.text();
           Papa.parse(genreText, {

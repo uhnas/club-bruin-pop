@@ -52,7 +52,7 @@ const timelineData = [
     "Headline": "Facebook launches at Harvard",
     "Group": "Economy",
     "Text": "Social media's new wave will reshape the virality of music.",
-    "Image": "/images/timeline/facebook.jpg"
+    "Image": "./images/timeline/facebook.jpg"
   },
   {
     "Year": 2005,
@@ -77,7 +77,7 @@ const timelineData = [
     "Headline": "First iPhone released",
     "Group": "Economy",
     "Text": "Smartphones make portable streaming and social sharing effortless.",
-    "Image": "/images/timeline/iphone.jpg"
+    "Image": "./images/timeline/iphone.jpg"
   },
   {
     "Year": 2007,
@@ -86,7 +86,7 @@ const timelineData = [
     "Headline": "Soulja Boy's \"Crank That\" hits #1",
     "Group": "Music",
     "Text": "First song to top charts due to viral Myspace & YouTube dances.",
-    "Image": "/images/timeline/souljaboy.jpg"
+    "Image": "./images/timeline/souljaboy.jpg"
   },
   {
     "Year": 2007,
@@ -95,7 +95,7 @@ const timelineData = [
     "Headline": "NBER declared recession began (Dec 2007).",
     "Group": "Economy",
     "Text": "Official start of the Great Recession in the U.S.",
-    "Image": "/images/timeline/recession.jpg"
+    "Image": "./images/timeline/recession.jpg"
   },
   {
     "Year": 2008,
@@ -120,7 +120,7 @@ const timelineData = [
     "Headline": "Lady Gaga releases \"Just Dance\"",
     "Group": "Music",
     "Text": "Electro‑pop anthem fueled by escapist nightlife energy.",
-    "Image": "/images/timeline/justdance.jpg"
+    "Image": "./images/timeline/justdance.jpg"
   },
   {
     "Year": 2009,
@@ -145,7 +145,7 @@ const timelineData = [
     "Headline": "U.S. unemployment peaks at 10%",
     "Group": "Economy",
     "Text": "Highest rate of joblessness and poverty in the era emphasizes the need for escapism.",
-    "Image": "/images/timeline/unemployment.jpg"
+    "Image": "./images/timeline/unemployment.jpg"
   },
   {
     "Year": 2011,
@@ -170,7 +170,7 @@ const timelineData = [
     "Headline": "Harlem Shake meme erupts",
     "Group": "Music",
     "Text": "15‑second dance snippets dominate Vine & YouTube.",
-    "Image": "/images/timeline/harlemshake.jpg"
+    "Image": "./images/timeline/harlemshake.jpg"
   },
   {
     "Year": 2014,
@@ -187,7 +187,7 @@ const timelineData = [
     "Headline": "WHO declares COVID‑19 pandemic",
     "Group": "Economy",
     "Text": "Lockdowns crash economies; TikTok engagement skyrockets.",
-    "Image": "/images/timeline/pandemic.jpg"
+    "Image": "./images/timeline/pandemic.jpg"
   },
   {
     "Year": 2021,
@@ -212,7 +212,7 @@ const timelineData = [
     "Headline": "Barbiecore dominates social feeds",
     "Group": "Nostalgia",
     "Text": "Hot‑pink Y2K palette floods social media, fashion, pop culture, showcasing a return to the 2000s.",
-    "Image": "/images/timeline/barbiecore.jpg"
+    "Image": "./images/timeline/barbiecore.jpg"
   },
   {
     "Year": 2024,
@@ -229,7 +229,7 @@ const timelineData = [
     "Headline": "'Recession Pop' videos garner million of views on social media.",
     "Group": "Nostalgia",
     "Text": "Social media note a surge in videos using 2007‑2012 club hits; TikTok memes fuel comeback.",
-    "Image": "/images/timeline/recessionpop.jpg"
+    "Image": "./images/timeline/recessionpop.jpg"
   }
 ];
 
@@ -457,10 +457,10 @@ function HomePage() {
           </div>
           <div className="era-visuals">
             <div className="bpm-chart">
-              <img src="/images/timeline/myspace.gif" className="visual-gif" />
+              <img src="./images/timeline/myspace.gif" className="visual-gif" />
             </div>
             <div className="viral-clip">
-              <img src="/images/timeline/homepage.gif" className="visual-gif" />
+              <img src="./images/timeline/homepage.gif" className="visual-gif" />
             </div>
           </div>
         </div>
@@ -471,10 +471,10 @@ function HomePage() {
         <div className="era-content flipped">
           <div className="era-visuals">
             <div className="bpm-chart">
-              <img src="/images/timeline/cd.gif" className="visual-gif" />
+              <img src="./images/timeline/cd.gif" className="visual-gif" />
             </div>
             <div className="viral-clip">
-              <img src="/images/timeline/mtv.gif" className="visual-gif" />
+              <img src="./images/timeline/mtv.gif" className="visual-gif" />
             </div>
           </div>
           <div className="era-text">
@@ -570,67 +570,67 @@ export default function App() {
     {
       title: "Party Rock Anthem",
       artist: "LMFAO",
-      file: "/music/party-rock-anthem.mp3"
+      file: "./music/party-rock-anthem.mp3"
     },
     {
       title: "Tik Tok",
       artist: "Ke$ha",
-      file: "/music/tik-tok.mp3"
+      file: "./music/tik-tok.mp3"
     },
     {
       title: "Just Dance",
       artist: "Lady Gaga",
-      file: "/music/just-dance.mp3"
+      file: "./music/just-dance.mp3"
     },
     {
       title: "I Gotta Feeling",
       artist: "Black Eyed Peas",
-      file: "/music/i-gotta-feeling.mp3"
+      file: "./music/i-gotta-feeling.mp3"
     },
     {
       title: "The Way I Are",
       artist: "Timbaland",
-      file: "/music/the-way-i-are.mp3"
+      file: "./music/the-way-i-are.mp3"
     },
     {
       title: "Down",
       artist: "Jay Sean",
-      file: "/music/down.mp3"
+      file: "./music/down.mp3"
     },
     {
       title: "DJ Got Us Fallin' In Love",
       artist: "Usher ft. Pitbull",
-      file: "/music/dj-got-us-fallin-in-love.mp3"
+      file: "./music/dj-got-us-fallin-in-love.mp3"
     },
     {
       title: "We R Who We R",
       artist: "Ke$ha",
-      file: "/music/we-r-who-we-r.mp3"
+      file: "./music/we-r-who-we-r.mp3"
     },
     {
       title: "Give Me Everything",
       artist: "Pitbull ft. Ne-Yo",
-      file: "/music/give-me-everything.mp3"
+      file: "./music/give-me-everything.mp3"
     },
     {
       title: "We Found Love",
       artist: "Rihanna",
-      file: "/music/we-found-love.mp3"
+      file: "./music/we-found-love.mp3"
     },
     {
       title: "Firework",
       artist: "Katy Perry",
-      file: "/music/firework.mp3"
+      file: "./music/firework.mp3"
     },
     {
       title: "Dynamite",
       artist: "Taio Cruz",
-      file: "/music/dynamite.mp3"
+      file: "./music/dynamite.mp3"
     },
     {
       title: "Time of Our Lives",
       artist: "Ne-Yo & Pitbull",
-      file: "/music/time-of-our-lives.mp3"
+      file: "./music/time-of-our-lives.mp3"
     }
   ];
 
@@ -761,7 +761,7 @@ export default function App() {
 
   return (
     <AudioContext.Provider value={audioContextValue}>
-      <Router>
+      <Router basename="/club-bruin-pop">
         <div className="app">
           <ScrollToTop />
           <Navigation />
