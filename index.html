@@ -29,8 +29,50 @@
       }(window.location))
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
-    <script type="module" crossorigin src="/club-bruin-pop/assets/index-iJo9zSMH.js"></script>
-    <link rel="stylesheet" crossorigin href="/club-bruin-pop/assets/index-CvwamsFw.css">
+    
+    <!-- NUCLEAR COMIC SANS ENFORCEMENT -->
+    <script type="text/javascript">
+      // Force Comic Sans before anything else loads
+      (function() {
+        const forceComicSans = function() {
+          const style = document.createElement('style');
+          style.innerHTML = `
+            *, *::before, *::after, html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select, label, li, ul, ol, nav, header, footer, main, section, article {
+              font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
+            }
+            [style*="font-family"] { font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important; }
+            [class] { font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important; }
+          `;
+          document.head.appendChild(style);
+          
+          // Force on existing elements
+          if (document.body) {
+            document.body.style.setProperty('font-family', 'Comic Sans MS, Arial, Helvetica, sans-serif', 'important');
+            const all = document.querySelectorAll('*');
+            for (let i = 0; i < all.length; i++) {
+              all[i].style.setProperty('font-family', 'Comic Sans MS, Arial, Helvetica, sans-serif', 'important');
+            }
+          }
+        };
+        
+        // Force immediately if DOM is ready
+        if (document.readyState !== 'loading') {
+          forceComicSans();
+        } else {
+          document.addEventListener('DOMContentLoaded', forceComicSans);
+        }
+        
+        // Force every 50ms until page is fully loaded
+        const preloadInterval = setInterval(function() {
+          forceComicSans();
+          if (document.readyState === 'complete') {
+            clearInterval(preloadInterval);
+          }
+        }, 50);
+      })();
+    </script>
+    <script type="module" crossorigin src="/club-bruin-pop/assets/index-BIhR94sP.js"></script>
+    <link rel="stylesheet" crossorigin href="/club-bruin-pop/assets/index-QIyIc7PQ.css">
   </head>
   <body>
     <div id="root"></div>
