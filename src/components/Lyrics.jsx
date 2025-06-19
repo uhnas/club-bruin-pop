@@ -143,7 +143,7 @@ const Lyrics = () => {
                   className="play-button neon-button"
                   onClick={() => audioContext.handlePlaySong(song.playlistIndex)}
                 >
-                  ▶ Play in iPod (double-click)
+                  ▶ Play in iPod
                 </button>
               </div>
             )}

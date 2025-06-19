@@ -927,7 +927,7 @@ body {
   box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
   display: flex;
   gap: 0.5rem;
-  font-family: 'Courier New', monospace;
+  font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
 }
 
 .timeline-content {

@@ -1,4 +1,32 @@
-* {
+*, *::before, *::after {
+  font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
+}
+
+html {
+  font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
+}
+
+body, body * {
+  font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
+}
+
+/* Force Comic Sans on all common elements */
+h1, h2, h3, h4, h5, h6, p, div, span, a, button, input, textarea, select, label, li, ul, ol, nav, header, footer, main, section, article {
+  font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
+}
+
+/* Force on all React components */
+[class*="neon"], [class*="landing"], [class*="home"], [class*="timeline"], [class*="data"], [class*="nav"], [class*="hero"], [class*="ipod"], [class*="mood"], [class*="era"] {
+  font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
+}
+
+/* Override any other font declarations */
+[style*="font-family"] {
+  font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
+}
+
+/* Force font on all elements with any class */
+[class] {
   font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
 }
 
@@ -46,7 +74,7 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
+  font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif !important;
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;

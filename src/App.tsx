@@ -7,6 +7,8 @@ import DataViz from "./components/DataViz";
 import Lyrics from "./components/Lyrics";
 // @ts-ignore
 import References from "./components/References";
+// @ts-ignore
+import FontEnforcer from "./components/FontEnforcer";
 
 // Create global audio context
 export const AudioContext = createContext<{
@@ -761,6 +763,7 @@ export default function App() {
 
   return (
     <AudioContext.Provider value={audioContextValue}>
+      <FontEnforcer />
       <Router basename="/club-bruin-pop">
         <div className="app">
           <ScrollToTop />
