@@ -279,7 +279,6 @@ function HomePage() {
   const audioContext = useContext(AudioContext);
   if (!audioContext) return null;
   const { 
-    audioRef, 
     isPlaying, 
     currentSong, 
     playlist, 
@@ -289,7 +288,6 @@ function HomePage() {
     handleNext, 
     handlePrevious,
     handleSeek,
-    handlePlaySong
   } = audioContext;
 
   const navigate = useNavigate();
