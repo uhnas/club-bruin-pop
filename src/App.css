@@ -1735,6 +1735,38 @@ body {
 /* COMPREHENSIVE RESPONSIVE DESIGN UPDATES  */
 /* ========================================= */
 
+/* Extra small phones (320px - 375px) */
+@media (max-width: 375px) {
+  .nav-links {
+    gap: 0.3rem;
+  }
+
+  .neon-link {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.4rem;
+  }
+
+  .back-to-landing-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .ipod-wheel {
+    width: 100px;
+    height: 100px;
+  }
+
+  .ipod {
+    width: 240px;
+    height: 350px;
+  }
+
+  .ipod-screen {
+    width: 200px;
+    height: 120px;
+  }
+}
+
 /* Mobile First - Small phones (320px - 480px) */
 @media (max-width: 480px) {
   /* Base layout adjustments */
@@ -1750,29 +1782,33 @@ body {
 
   /* Navigation adjustments */
   .neon-nav {
-    padding: 1rem;
+    padding: 0.8rem 1rem;
   }
 
   .nav-container {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav-links {
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
     justify-content: center;
+    flex: 1;
   }
 
   .neon-link {
-    font-size: 1rem;
-    padding: 0.5rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.6rem;
+    white-space: nowrap;
   }
 
   .back-to-landing-btn {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
   }
 
   /* Hero section mobile */
@@ -1805,36 +1841,36 @@ body {
   }
 
   .ipod {
-    width: 280px;
-    height: 420px;
+    width: 260px;
+    height: 380px;
     margin: 0 auto;
   }
 
   .ipod-screen {
-    width: 240px;
-    height: 160px;
+    width: 220px;
+    height: 140px;
   }
 
   .ipod-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .ipod-song {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .ipod-artist {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .ipod-btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 
   .ipod-wheel {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
   }
 
   /* MySpace widgets mobile */
@@ -2109,13 +2145,18 @@ body {
   }
 
   .ipod {
-    width: 320px;
-    height: 480px;
+    width: 300px;
+    height: 450px;
   }
 
   .ipod-screen {
-    width: 280px;
-    height: 180px;
+    width: 260px;
+    height: 170px;
+  }
+
+  .ipod-wheel {
+    width: 140px;
+    height: 140px;
   }
 
   .memory-grid {
