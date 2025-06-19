@@ -16,7 +16,6 @@ export const AudioContext = createContext<{
   playlist: Array<{ title: string; artist: string; file: string }>;
   currentTime: number;
   duration: number;
-  justAutoPlayed: boolean;
   handlePlayPause: () => void;
   handleNext: () => void;
   handlePrevious: () => void;
@@ -34,18 +33,6 @@ function ScrollToTop() {
   }, [pathname]);
 
   return null;
-}
-
-// Component to conditionally render Navigation based on current route
-function ConditionalNavigation() {
-  const location = useLocation();
-  
-  // Don't render navigation on landing page
-  if (location.pathname === '/') {
-    return null;
-  }
-  
-  return <Navigation />;
 }
 
 // Timeline data
@@ -298,7 +285,6 @@ function HomePage() {
     playlist, 
     currentTime,
     duration,
-    justAutoPlayed,
     handlePlayPause, 
     handleNext, 
     handlePrevious,
@@ -363,7 +349,7 @@ function HomePage() {
               <div className="ipod-content">
                 <h3 className="ipod-title">Now Playing</h3>
                 <div className="ipod-artwork"></div>
-                <p className={`ipod-song ${justAutoPlayed ? 'autoplay-highlight' : ''}`}>{playlist[currentSong].title}</p>
+                <p className="ipod-song">{playlist[currentSong].title}</p>
                 <p className="ipod-artist">{playlist[currentSong].artist}</p>
                 <div className="ipod-progress">
                   <input
@@ -458,7 +444,7 @@ function HomePage() {
               <p>
                 This era was the perfect combination of the rise of social media and music's digital transformation. Online spaces such as MySpace, 
                 YouTube, and  Facebook became the new platforms where dance moves and songs went viral. Some examples are the "Crank That" 
-                dance and the "Harlem Shake". These were part of the first wave of internet culture.
+                dance and the "Harlem Shake"? These were part of the first wave of internet culture.
               </p>
               <p>
                 For Gen Z, this music is more than nostalgia. The music acts as a bridge between the analog and digital eras. We grew up 
@@ -580,7 +566,6 @@ export default function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [justAutoPlayed, setJustAutoPlayed] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const playlist = [
@@ -665,40 +650,36 @@ export default function App() {
   const handleNext = () => {
     const nextSong = (currentSong + 1) % playlist.length;
     setCurrentSong(nextSong);
-    setJustAutoPlayed(true);
-    // Clear the autoplay indicator after 2 seconds
-    setTimeout(() => setJustAutoPlayed(false), 2000);
+    setCurrentTime(0);
     
     if (audioRef.current) {
       audioRef.current.src = playlist[nextSong].file;
-      // Load the new source first
-      audioRef.current.load();
-      // Then attempt to play
-      audioRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch(error => {
-        console.error("Error playing next song:", error);
-        setIsPlaying(false);
-        // Try to play again after a short delay if autoplay fails
-        setTimeout(() => {
-          if (audioRef.current) {
-            audioRef.current.play().then(() => {
-              setIsPlaying(true);
-            }).catch(retryError => {
-              console.error("Retry error playing next song:", retryError);
-            });
-          }
-        }, 100);
-      });
+      audioRef.current.currentTime = 0;
+      audioRef.current.pause();
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.play();
+          setIsPlaying(true);
+        }
+      }, 10);
     }
   };
 
   const handlePrevious = () => {
     const prevSong = (currentSong - 1 + playlist.length) % playlist.length;
     setCurrentSong(prevSong);
-    setIsPlaying(false);
+    setCurrentTime(0);
+    
     if (audioRef.current) {
       audioRef.current.src = playlist[prevSong].file;
+      audioRef.current.currentTime = 0;
+      audioRef.current.pause();
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.play();
+          setIsPlaying(true);
+        }
+      }, 10);
     }
   };
 
@@ -722,19 +703,46 @@ export default function App() {
     }
   };
 
+  const handlePlay = () => {
+    setIsPlaying(true);
+  };
+
+  const handlePause = () => {
+    setIsPlaying(false);
+  };
+
   const handlePlaySong = (songIndex: number) => {
     setCurrentSong(songIndex);
+    setCurrentTime(0);
+    
     if (audioRef.current) {
       audioRef.current.src = playlist[songIndex].file;
-      // Load the new source first
-      audioRef.current.load();
-      // Then attempt to play
-      audioRef.current.play().then(() => {
-        setIsPlaying(true);
-      }).catch(error => {
-        console.error("Error playing song:", error);
-        setIsPlaying(false);
-      });
+      audioRef.current.currentTime = 0;
+      audioRef.current.pause();
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.play();
+          setIsPlaying(true);
+        }
+      }, 10);
+    }
+  };
+
+  const handleSongEnded = () => {
+    const nextSong = (currentSong + 1) % playlist.length;
+    setCurrentSong(nextSong);
+    setCurrentTime(0);
+    
+    if (audioRef.current) {
+      audioRef.current.src = playlist[nextSong].file;
+      audioRef.current.currentTime = 0;
+      audioRef.current.pause();
+      setTimeout(() => {
+        if (audioRef.current) {
+          audioRef.current.play();
+          setIsPlaying(true);
+        }
+      }, 10);
     }
   };
 
@@ -745,7 +753,6 @@ export default function App() {
     playlist,
     currentTime,
     duration,
-    justAutoPlayed,
     handlePlayPause,
     handleNext,
     handlePrevious,
@@ -759,36 +766,28 @@ export default function App() {
       <Router>
         <div className="app">
           <ScrollToTop />
-          <ConditionalNavigation />
-          <MainContent />
+          <Navigation />
+          <div className="main-content">
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/timeline" element={<Timeline />} />
+              <Route path="/data-viz" element={<DataViz />} />
+              <Route path="/lyrics" element={<Lyrics />} />
+              <Route path="/references" element={<References />} />
+            </Routes>
+          </div>
           <audio
             ref={audioRef}
             src={playlist[currentSong].file}
-            onEnded={handleNext}
+            onEnded={handleSongEnded}
             onTimeUpdate={handleTimeUpdate}
             onLoadedMetadata={handleLoadedMetadata}
+            onPlay={handlePlay}
+            onPause={handlePause}
           />
         </div>
       </Router>
     </AudioContext.Provider>
-  );
-}
-
-// Component to handle main content with conditional className
-function MainContent() {
-  const location = useLocation();
-  const isLandingPage = location.pathname === '/';
-  
-  return (
-    <div className={`main-content ${isLandingPage ? 'landing-content' : ''}`}>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/timeline" element={<Timeline />} />
-        <Route path="/data-viz" element={<DataViz />} />
-        <Route path="/lyrics" element={<Lyrics />} />
-        <Route path="/references" element={<References />} />
-      </Routes>
-    </div>
   );
 }

@@ -198,15 +198,10 @@ body {
 
 /* Main content wrapper */
 .main-content {
-  width: 100vw;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* Specific styling for pages with navigation */
-.main-content:not(.landing-content) {
   padding-top: 80px; /* Height of the fixed nav */
+  width: 100vw;
   min-height: calc(100vh - 80px);
+  overflow-x: hidden;
 }
 
 /* Home Page */
@@ -1734,27 +1729,4 @@ body {
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
 }
 
-/* iPod Song Autoplay Highlight */
-.autoplay-highlight {
-  animation: autoplayGlow 2s ease-out;
-}
-
-@keyframes autoplayGlow {
-  0% {
-    color: #fff;
-    text-shadow: 0 0 5px #ff2d95;
-  }
-  20% {
-    color: #ff2d95;
-    text-shadow: 
-      0 0 10px #ff2d95,
-      0 0 20px #ff2d95,
-      0 0 30px #ff2d95;
-    transform: scale(1.05);
-  }
-  100% {
-    color: #fff;
-    text-shadow: 0 0 5px #ff2d95;
-    transform: scale(1);
-  }
-}
+/* Remove old complex reference styles */
